@@ -8,7 +8,8 @@ const generateUniqueId = () => {
 
 const generateQRCode = async (businessId) => {
   const uniqueId = generateUniqueId();
-  const reviewUrl = `https://g.page/r/${businessId}/review?unique=${uniqueId}`;
+  // Use the actual Google Business Review URL for Apex
+  const reviewUrl = `https://g.page/r/${businessId}/review?qr=${uniqueId}`;
 
   try {
     const qrCodeDataUrl = await QRCode.toDataURL(reviewUrl);

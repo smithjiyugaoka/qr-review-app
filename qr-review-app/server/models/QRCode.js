@@ -19,6 +19,14 @@ const QRCodeSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  scans: {
+    type: Number,
+    default: 0,
+  },
+  reviewsSubmitted: {
+    type: Number,
+    default: 0,
+  },
   createdAt: {
     type: Date,
     default: Date.now,
